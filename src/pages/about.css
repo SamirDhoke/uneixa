@@ -1,0 +1,30 @@
+.about-page {
+	margin: 32px;
+}
+
+.about-page section {
+	margin-top: 32px;
+}
+
+.founders-flex {
+	display: flex;
+	flex-direction: row;
+	gap: 32px;
+}
+
+.founders-flex > div > figure {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.founders-flex {
+		flex-direction: column;
+	}
+}
+

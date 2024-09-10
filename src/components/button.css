@@ -1,0 +1,11 @@
+.custom-button {
+	border: none;
+	padding: 8px 16px;
+	border-radius: 8px;
+
+	cursor: pointer;
+}
+
+.custom-button:active {
+	opacity: 0.8;
+}

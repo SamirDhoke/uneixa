@@ -1,0 +1,5 @@
+const Carousal = (props) => {
+	return (
+			
+	)
+}

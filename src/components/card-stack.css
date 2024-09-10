@@ -1,0 +1,24 @@
+.card-stack {
+	width: 90%;
+	height: 40vh;
+	margin: auto;
+
+	position: relative;
+
+
+	margin-top: 55px;
+
+}
+
+@media screen and (max-width: 760px) {
+	
+	.card-stack {
+		width: 75%;
+	}
+
+}
+
+.card-stack > * {
+	position: absolute;
+}
+

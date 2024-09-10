@@ -1,0 +1,16 @@
+.home-page section {
+	margin-bottom: 32px;
+}
+
+.products-list-small {
+	background-color: var(--primary-dark);
+	padding: 32px 0;
+}
+
+.products-list-small > div {
+	margin: 0 48px;
+}
+
+.products-list-small > div > * {
+	margin-bottom: 32px;
+}

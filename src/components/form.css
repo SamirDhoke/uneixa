@@ -1,0 +1,27 @@
+.form-styled {
+
+}
+
+.input-styled, .textarea-styled {
+	margin-bottom: 16px;
+}
+
+.input-styled > input {
+	border: none;
+	border-radius: 16px;
+	padding: 10px;
+
+	background-color: #fafafa;
+	width: 100%;
+}
+
+.textarea-styled > textarea {
+
+	border: none;
+	border-radius: 16px;
+	padding: 10px;
+
+	background-color: #fafafa;
+	width: 100%;
+	
+}
