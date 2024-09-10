@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
-import { Route, Link, Routes } from 'react-router-dom';
+import { Route, Link, Routes, Navigate } from 'react-router-dom';
 
 import Nav from './components/nav.jsx';
 import Homepage from './pages/homepage.jsx';
@@ -25,7 +25,8 @@ function App() {
             <Route path='/about' element={<About/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
             <Route path='/investors'></Route>
-            <Route exact path='/home' element={<Homepage/>}></Route> 
+            <Route exact path='/home' element={<Homepage/>}></Route>
+            <Route exact path='/' element={<Navigate to='/home' replace/>}></Route> 
           </Routes>
         </main>
         <Footer/>

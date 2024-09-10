@@ -9,8 +9,14 @@
 
 .products-list-small > div {
 	margin: 0 48px;
+	display: flex;
+	flex-direction: column;
 }
 
 .products-list-small > div > * {
 	margin-bottom: 32px;
+}
+
+.products-list-small a {
+	align-self: flex-end;
 }

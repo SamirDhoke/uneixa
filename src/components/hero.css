@@ -1,6 +1,6 @@
 .hero-section {
 	background-color: var(--primary-dark);
-	height: 600px;
+	height: 768px;
 	width: 100%;
 
 	position: relative;
@@ -35,10 +35,35 @@
 	.hero-card {
 		width: 50%;
 	}	
+	.hero-section img {		
+		object-fit: cover;
+		object-position: 25% 0%
+	}	
 }
 
 @media screen and (max-width: 635px) {
 	.hero-card {
 		width: 75%;
+	}
+
+	.hero-section img {		
+		object-fit: cover;
+		
+		object-position: 60% 0%
+	}
+
+	.hero-card {
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		
+	}
+
+	.hero-card p {
+		font-size: 1.7rem;
+	}
+
+	.hero-card h1 {
+		font-size: 2.5rem;
 	}	
 }

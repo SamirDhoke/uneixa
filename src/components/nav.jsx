@@ -6,31 +6,57 @@ import { Link } from 'react-router-dom';
 import menuClose from '../assets/menu-close.svg';
 import menuOpen from '../assets/menu-open.svg';
 
+import MobileNav from './nav-mobile.jsx';
+
 import './nav.css'
 
-function Nav( props ) {
+function Nav(props) {
 
-  const [selected, setSelected] = useState( 'home' );
-  const [isMobile, setIsMobile] = useState(false);
+  const [selected, setSelected] = useState( 'home' );  
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      console.log('is mobile sized', isMobile)
+
+      if ( window.innerWidth < 768 ) {
+        console.log(window.innerWidth, isMobile)
+        // if (!isMobile) {
+        //   setIsMobile(true)
+        // }
+        setIsMobile(true)
+      } else {
+        console.log(window.innerWidth, isMobile)
+        // if (isMobile) {
+        //   setIsMobile(false)
+        // }
+        setIsMobile(false)
+      }
+    };
+    
+    if ( window.innerWidth < 768 ) {
+      setIsMobile(true);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  
+  }, []);
 
   const handleLinkClick = (e) => {
     setSelected(e.target.dataset.navtitle)
   }
 
-  useEffect(() => {
+  const handleOpenNav = (e) => {
+    setIsNavOpen(true)
+  }
 
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setIsMobile( true );
-      } else if (isMobile) {
-        setIsMobile( false );
-      }
-    };
-    
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  
-  }, []);
+  const handleCloseNav = (e) => {
+    setIsNavOpen(false)
+  }
 
 
   console.log('selected', selected);
@@ -63,10 +89,24 @@ function Nav( props ) {
           }
         </ul>
         ) : (
-          <img src={menuOpen} style={{ height: 32, width: 32, marginRight: 16 }}/>
+          isNavOpen ? (
+            <img 
+            src={menuClose} 
+            style={{ height: 32, width: 32, marginRight: 16 }}
+            onClick={handleCloseNav}
+            />
+          ) : (
+          <img 
+            src={menuOpen} 
+            style={{ height: 32, width: 32, marginRight: 16 }}
+            onClick={handleOpenNav}
+            />
+          )
         )}
         
       </div>
+
+      { (isMobile && isNavOpen) ? <MobileNav selected={selected} setSelected={setSelected}/> : null }
     </nav>
   )
 }

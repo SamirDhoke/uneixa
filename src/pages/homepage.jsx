@@ -27,7 +27,8 @@ const Homepage = (props) => {
              	<div>                              
                 	<h2>Products</h2>
                 	<CardGrid cards={products}/>
-              	</div>	            
+                	<Link to='/products'>Show All</Link>
+              	</div>
 	  		</section>
   		</article>
 	)
