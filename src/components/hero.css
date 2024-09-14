@@ -4,6 +4,8 @@
 	width: 100%;
 
 	position: relative;
+
+	
 }
 
 .hero-section img {
@@ -11,6 +13,7 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: 0% 0%
+
 }
 
 .hero-card {
@@ -20,7 +23,10 @@
 
 	color: white;
 
-	width: 25%;
+	
+	max-width: 370px;
+/* 	width: 30%; */
+
 }
 
 .hero-card h1 {
@@ -33,17 +39,29 @@
 
 @media screen and (max-width: 768px) {
 	.hero-card {
-		width: 50%;
+		width: 50%;		
 	}	
 	.hero-section img {		
 		object-fit: cover;
 		object-position: 25% 0%
 	}	
+
+	.hero-card h1 {
+		font-size: 2rem;
+	}
+
+	.hero-card p {
+		font-size: 1.5rem;
+	}
+
+	.hero-section {
+		height: 400px;
+	}
 }
 
 @media screen and (max-width: 635px) {
 	.hero-card {
-		width: 75%;
+/* 		width: 75%; */
 	}
 
 	.hero-section img {		
@@ -52,18 +70,18 @@
 		object-position: 60% 0%
 	}
 
-	.hero-card {
+/* 	.hero-card {
 		position: absolute;
 		top: 50%;
 		left: 10%;
 		
-	}
+	} */
 
-	.hero-card p {
+	/* .hero-card p {
 		font-size: 1.7rem;
 	}
 
 	.hero-card h1 {
 		font-size: 2.5rem;
-	}	
+	} */	
 }
