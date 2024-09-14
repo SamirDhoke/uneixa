@@ -52,3 +52,9 @@ footer .logo h2 {
 	height: 24px;
 	width: 24px;
 }
+
+@media screen and (max-width: 450px) {
+	.sec > p {	
+		font-size: 5px;
+	}	
+}

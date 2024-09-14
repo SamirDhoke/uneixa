@@ -67,7 +67,7 @@
 	.hero-section img {		
 		object-fit: cover;
 		
-		object-position: 60% 0%
+/* 		object-position: 60% 0% */
 	}
 
 /* 	.hero-card {
@@ -84,4 +84,28 @@
 	.hero-card h1 {
 		font-size: 2.5rem;
 	} */	
+}
+
+@media screen and (max-width: 450px) {
+	.hero-card {
+/* 		width: 75%; */
+	}
+
+	.hero-section {
+		height: 300px;
+	}
+
+	.hero-section img {		
+		object-fit: cover;
+		
+/* 		object-position: 60% 0% */
+	}
+
+	.hero-card p {
+		font-size: 1.2rem;
+	}
+
+	.hero-card h1 {
+		font-size: 1.5rem;
+	}	
 }
