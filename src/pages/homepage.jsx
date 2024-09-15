@@ -8,11 +8,11 @@ import CardSmall from '../components/card-small.jsx'
 import CardStack from '../components/card-stack.jsx';
 import CardGrid from '../components/card-grid.jsx'
 
-import { generateCardData } from '../utils/data.js';
+import { products as allProducts } from '../utils/data.js';
 
 import './homepage.css'
 
-const products = Array(2).fill(null).map(_ => generateCardData());
+const products = allProducts.slice(0, 2);
 
 const Homepage = (props) => {
 	return (

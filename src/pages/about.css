@@ -6,10 +6,27 @@
 	margin-top: 32px;
 }
 
-.founders-flex {
+.founders-flex-wrapper {
+	width: 100%;
+
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+
+	margin: 16px;
+
+}
+
+.founders-flex {
+	display: flex;
+	
 	gap: 32px;
+
+	flex: 1;
+
+	max-width: 768px;
+
+	justify-self: center;
 }
 
 .founders-flex > div > figure {
@@ -19,7 +36,22 @@
 	justify-content: center;
 	align-items: center;
 
+/* 	height: 400px; */
+
 	gap: 16px;
+}
+
+.founders-flex > div {
+	flex: 1;
+}
+
+.founders-flex > div > figure > img {
+	max-width: 400px;
+	width: 100%;
+}
+
+.founders-flex .name {
+	font-weight: bolder;
 }
 
 @media screen and (max-width: 768px) {

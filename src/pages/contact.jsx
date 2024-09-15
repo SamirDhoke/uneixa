@@ -12,7 +12,7 @@ const Contact = (props) => {
 		<article className='contact-page'>
 			<section>
 			    <h2>Contact us</h2>
-			    <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Reiciendis recusandae nesciunt nulla at iure, ullam dignissimos soluta eos accusantium repellat saepe. Voluptas praesentium eum deserunt asperiores sapiente pariatur dolor. Nobis.</p>
+			    <p>We'd love to hear from you! For inquiries, support, or to learn more about our products and services, please reach out to us through the contact form below or use the information provided. Our team is here to assist you and will respond as promptly as possible.</p>
 			</section>
 			<section className='contact-flex'>
 				<div className='contact-form'>
@@ -25,10 +25,10 @@ const Contact = (props) => {
 				</div>
 				<div className='office-addr'>
 					<h4>Office location</h4>
-					<p>Lorem ipsum dolor sit, amet consectetur</p>
-					<p>adipisicing, elit.</p>
-					<p>Cupiditate accusamus, 431-445</p>
-					<p>Office Phone : 020-323-121-2323</p>
+					<p>Uneixa Lifesciences Pvt. Ltd.</p>
+					<p>Flat No. A302, Jhulelal Tower</p>
+					<p>Near SP Lawns, Aundh, Pune - 411027</p>
+					<p>Office Phone : +91-7709578229</p>
 				</div>
 			</section>
   		</article>
