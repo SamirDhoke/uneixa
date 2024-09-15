@@ -1,6 +1,12 @@
+.card-stack-wrapper {
+	width: 100%;
+/* 	margin: 32px; */
+	height: 250px;
+	position: relative;
+}
+
 .card-stack {
-	width: 90%;
-	height: 40vh;
+	width: 80%;
 	margin: auto;
 
 	position: relative;

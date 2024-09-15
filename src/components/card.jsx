@@ -16,7 +16,7 @@ function Card({
 }) {
 	return (
 		<div className='card' style={styles}>
-			<h1>{title}</h1>
+			<h1>{title}{props.z}</h1>
 			<p>{desc}</p>
 			<Button>{actionText}</Button>
 		</div>	

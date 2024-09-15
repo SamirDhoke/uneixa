@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import Card from './card.jsx';
+import Button from './button.jsx';
 import './card-stack.css';
 
 const solutions = [
@@ -31,26 +32,56 @@ const calculatePos = (distance) => {
 }
 
 const CardStack = (props) => {
+
+	const [cards, setCards] = useState([]);
+
+	const rotate = () => {
+
+		const last = cards[cards.length - 1]
+		const rest = cards.slice(0, cards.length - 1)
+		const newCards = [last].concat(rest)
+
+		console.log('cards', cards, 'rotated', newCards)
+
+		setCards(newCards);
+	}
+
+	useEffect(() => {
+
+		const newCards = solutions.map(
+			(sol, idx) => ({
+				...sol,
+				z: idx + 1,
+				styles : {
+					top: `${calculatePos(idx + 1)}px`,
+					left: `${calculatePos(idx + 1)}px`,
+					backgroundColor: `hsl(360, 0%, ${100 - ((idx + 1) * 10)}%)`
+				}
+			})
+		)
+
+		setCards(newCards)
+
+	}, [])
+
+
 	return (
-		<div className='card-stack'>
+		<div className='card-stack-wrapper'>
+			<div className='card-stack'>
 			{
-				solutions
+				cards
 					.map(
 						(sol, idx) => {
 							return (
-								<Card 
-									styles={{
-										top: `${calculatePos(idx + 1)}px`,
-										left: `${calculatePos(idx + 1)}px`,
-										backgroundColor: `hsl(0, 0%, ${(3 - idx + 1) * 10}%)`
-									}}
-									{...sol}
-									key={sol.id}
-									/>	
+								<Card {...sol} key={sol.id} />	
 							)	
 						}
 					)
 			}
+			</div>
+			<div className='carousal-indicator'>
+				
+			</div>
 		</div>	
 	)
 }
