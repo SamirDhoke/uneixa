@@ -1,0 +1,15 @@
+.card {
+	background-color: var(--primary-light);
+	border-radius: 16px;
+	padding: 32px;
+
+	width: 100%;
+}
+
+.card h1, p {
+	margin-bottom: 16px;
+}
+
+.card p {
+	width: 100%
+}

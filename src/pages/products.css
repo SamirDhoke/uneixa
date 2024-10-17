@@ -1,0 +1,12 @@
+.products-page {
+	margin: 32px;
+}
+
+.products-page .intro p {
+/* 	font-size: small; */
+	margin-top: 16px;
+}
+
+.products-page .grid {
+	margin: 32px;
+}

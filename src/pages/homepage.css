@@ -1,0 +1,22 @@
+.home-page section {
+	margin-bottom: 32px;
+}
+
+.products-list-small {
+	background-color: var(--primary-dark);
+	padding: 32px 0;
+}
+
+.products-list-small > div {
+	margin: 0 48px;
+	display: flex;
+	flex-direction: column;
+}
+
+.products-list-small > div > * {
+	margin-bottom: 32px;
+}
+
+.products-list-small a {
+	align-self: flex-end;
+}

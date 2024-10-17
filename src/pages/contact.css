@@ -1,0 +1,31 @@
+.contact-page {
+	margin: 32px;
+}
+
+.contact-page section {
+	margin-bottom: 48px;
+}
+
+.contact-flex {
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+}
+
+.contact-flex > * {
+	flex: 1;
+}
+
+.office-addr h4 {
+	margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-flex {
+		flex-direction: column;
+	}
+
+	.contact-flex > * {
+		width: 100%;
+	}	
+}
