@@ -22,7 +22,24 @@
 		width: 75%;
 	}
 
+	.card-stack-wrapper {
+		height: 300px;
+	}
+
 }
+
+@media screen and (max-width: 500px) {
+	
+	.card-stack {
+		width: 75%;
+	}
+
+	.card-stack-wrapper {
+		height: 400px;
+	}
+
+}
+
 
 .card-stack > * {
 	position: absolute;
